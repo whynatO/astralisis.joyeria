@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo | Astralisis Joyeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="#inicio">Astralisis Joyeria</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="cart-button" id="cartButton" aria-label="Carrito de compras">
+          Carrito <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <p class="hero-tag">Colección alternativa</p>
+          <h1>Joyería creativa en tonos lila para destacar tu esencia</h1>
+          <p>
+            Piezas de acero inoxidable, acero quirúrgico y cuentas de resina/plástico con diseño
+            moderno, femenino y auténtico.
+          </p>
+          <a href="#catalogo" class="hero-cta">Ver catálogo</a>
+        </div>
+      </section>
+
+      <section class="catalog container" id="catalogo">
+        <div class="section-heading">
+          <h2>Catálogo destacado</h2>
+          <p>Más de 20 diseños únicos con acabados resistentes y detalles orgánicos.</p>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="about container" id="nosotros">
+        <div class="organic-shape"></div>
+        <h2>Nosotros</h2>
+        <p>
+          En Astralisis Joyeria creamos accesorios alternativos con una estética lila vibrante,
+          formas suaves y personalidad propia. Diseñamos cada pieza para combinar creatividad,
+          durabilidad y estilo cotidiano.
+        </p>
+      </section>
+
+      <section class="contact container" id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres una pieza personalizada o venta por mayoreo? Escríbenos.</p>
+        <a href="mailto:hola@astralisisjoyeria.com" class="contact-link">hola@astralisisjoyeria.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Astralisis Joyeria · Diseño alternativo y original.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
