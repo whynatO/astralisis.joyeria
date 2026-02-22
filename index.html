@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astralisis - Joyería Alternativa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ASTRALISIS</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrito Lateral -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0</span></strong>
+            </div>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Banner Principal -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>ASTRALISIS</h1>
+            <p>Joyería Alternativa Hecha con Creatividad</p>
+            <button class="cta-btn" onclick="document.getElementById('catalogo').scrollIntoView({behavior: 'smooth'})">
+                Explorar Catálogo
+            </button>
+        </div>
+        <div class="hero-decoration">
+            <svg class="spiral" viewBox="0 0 100 100">
+                <path d="M50,10 Q70,30 50,50 Q30,70 50,90" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M50,20 Q65,35 50,50 Q35,65 50,80" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="catalogo" class="catalog">
+        <div class="catalog-header">
+            <h2>Nuestro Catálogo</h2>
+            <p>Descubre nuestra colección de joyería única y auténtica</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('acero')">Acero</button>
+            <button class="filter-btn" onclick="filterProducts('resina')">Resina</button>
+            <button class="filter-btn" onclick="filterProducts('plastico')">Plástico</button>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="about">
+        <div class="about-content">
+            <h2>Sobre Astralisis</h2>
+            <p>
+                Somos una marca de joyería alternativa dedicada a crear piezas únicas que expresan 
+                tu individualidad. Cada diseño es cuidadosamente elaborado con materiales de calidad 
+                como acero inoxidable, acero quirúrgico, resina y plástico reciclado.
+            </p>
+            <p>
+                Nuestro enfoque es la creatividad sin límites, combinando estética moderna con 
+                toques artísticos que hacen cada pieza especial y diferente.
+            </p>
+            <div class="values">
+                <div class="value-item">
+                    <h3>✨ Calidad</h3>
+                    <p>Materiales premium y acabados impecables</p>
+                </div>
+                <div class="value-item">
+                    <h3>🎨 Diseño</h3>
+                    <p>Creatividad y originalidad en cada pieza</p>
+                </div>
+                <div class="value-item">
+                    <h3>♻️ Sostenible</h3>
+                    <p>Comprometidos con el medio ambiente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="contact-content">
+            <h2>Contacto</h2>
+            <form class="contact-form" onsubmit="handleContact(event)">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+            <div class="contact-info">
+                <p>📧 info@astralisis.com</p>
+                <p>📱 +34 XXX XXX XXX</p>
+                <p>📍 España</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ASTRALISIS. Todos los derechos reservados.</p>
+        <p>Hecho con creatividad y amor ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
